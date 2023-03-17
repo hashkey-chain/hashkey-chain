@@ -28,12 +28,12 @@ jobs:
       - name: Upload hskchain
         uses: actions/upload-artifact@v3
         with:
-          path: build/bin/hskchain
+          path: build/bin/hsk-chain
 
-      - name: Upload platonkey
+      - name: Upload hsk-chain-key
         uses: actions/upload-artifact@v3
         with:
-          path: build/bin/platonkey
+          path: build/bin/hsk-chain-key
 
       - name: Upload ctool
         uses: actions/upload-artifact@v3

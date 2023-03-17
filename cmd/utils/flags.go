@@ -1417,11 +1417,11 @@ func MakeConsolePreloads(ctx *cli.Context) []string {
 // This is a temporary function used for migrating old command/flags to the
 // new format.
 //
-// e.g. hskchain account new --keystore /tmp/mykeystore --lightkdf
+// e.g. hsk-chain account new --keystore /tmp/mykeystore --lightkdf
 //
 // is equivalent after calling this method with:
 //
-// hskchain --keystore /tmp/mykeystore --lightkdf account new
+// hsk-chain --keystore /tmp/mykeystore --lightkdf account new
 //
 // This allows the use of the existing configuration functionality.
 // When all flags are migrated this function can be removed and the existing
