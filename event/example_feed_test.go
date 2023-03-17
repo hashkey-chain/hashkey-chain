@@ -19,7 +19,7 @@ package event_test
 import (
 	"fmt"
 
-	"github.com/PlatONnetwork/PlatON-Go/event"
+	"github.com/hashkey-chain/hashkey-chain/event"
 )
 
 func ExampleFeed_acknowledgedEvents() {

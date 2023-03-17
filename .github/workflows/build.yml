@@ -25,10 +25,10 @@ jobs:
       - name: make all
         run: go mod tidy && make all
 
-      - name: Upload platon
+      - name: Upload hskchain
         uses: actions/upload-artifact@v3
         with:
-          path: build/bin/platon
+          path: build/bin/hskchain
 
       - name: Upload platonkey
         uses: actions/upload-artifact@v3

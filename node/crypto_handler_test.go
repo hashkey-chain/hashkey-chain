@@ -19,8 +19,8 @@ package node
 import (
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 )
 
 var (

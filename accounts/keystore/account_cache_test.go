@@ -30,8 +30,8 @@ import (
 	"github.com/cespare/cp"
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts"
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/accounts"
+	"github.com/hashkey-chain/hashkey-chain/common"
 )
 
 var (

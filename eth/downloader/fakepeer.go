@@ -22,14 +22,14 @@ import (
 
 	"github.com/syndtr/goleveldb/leveldb/iterator"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/snapshotdb"
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/core/snapshotdb"
+	"github.com/hashkey-chain/hashkey-chain/log"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/core"
-	"github.com/PlatONnetwork/PlatON-Go/core/rawdb"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/ethdb"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/core"
+	"github.com/hashkey-chain/hashkey-chain/core/rawdb"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/ethdb"
 )
 
 // FakePeer is a mock downloader peer that operates on a local database instance

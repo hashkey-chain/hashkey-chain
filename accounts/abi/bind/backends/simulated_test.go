@@ -10,16 +10,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/params"
+	"github.com/hashkey-chain/hashkey-chain/params"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts/abi/bind"
+	"github.com/hashkey-chain/hashkey-chain/accounts/abi/bind"
 
-	ethereum "github.com/PlatONnetwork/PlatON-Go"
-	"github.com/PlatONnetwork/PlatON-Go/accounts/abi"
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/core"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
+	ethereum "github.com/hashkey-chain/hashkey-chain"
+	"github.com/hashkey-chain/hashkey-chain/accounts/abi"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/core"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
 )
 
 func TestSimulatedBackend(t *testing.T) {

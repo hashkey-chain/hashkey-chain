@@ -20,9 +20,9 @@ import (
 	"golang.org/x/crypto/sha3"
 	"math/big"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 )
 
 type journalEntry interface {

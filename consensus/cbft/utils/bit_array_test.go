@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

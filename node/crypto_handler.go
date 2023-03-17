@@ -22,13 +22,13 @@ import (
 	"golang.org/x/crypto/sha3"
 	"sync"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 )
 
 var (

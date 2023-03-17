@@ -22,7 +22,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/vm"
+	"github.com/hashkey-chain/hashkey-chain/core/vm"
 )
 
 func TestState(t *testing.T) {

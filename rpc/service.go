@@ -26,7 +26,7 @@ import (
 	"sync"
 	"unicode"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/log"
 )
 
 var (

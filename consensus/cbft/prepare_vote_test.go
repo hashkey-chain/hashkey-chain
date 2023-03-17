@@ -23,13 +23,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/evidence"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/utils"
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/evidence"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/utils"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
 
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/protocols"
-	ctypes "github.com/PlatONnetwork/PlatON-Go/consensus/cbft/types"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/protocols"
+	ctypes "github.com/hashkey-chain/hashkey-chain/consensus/cbft/types"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
 	"github.com/stretchr/testify/suite"
 )
 

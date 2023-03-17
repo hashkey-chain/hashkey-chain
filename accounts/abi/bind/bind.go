@@ -30,8 +30,8 @@ import (
 	"text/template"
 	"unicode"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts/abi"
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/accounts/abi"
+	"github.com/hashkey-chain/hashkey-chain/log"
 )
 
 // Lang is a target programming language selector to generate bindings for.

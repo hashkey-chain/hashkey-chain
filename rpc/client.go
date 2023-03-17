@@ -28,7 +28,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/log"
 )
 
 var (
@@ -410,7 +410,7 @@ func (c *Client) Notify(ctx context.Context, method string, args ...interface{})
 
 // EthSubscribe registers a subscripion under the "eth" namespace.
 func (c *Client) EthSubscribe(ctx context.Context, channel interface{}, args ...interface{}) (*ClientSubscription, error) {
-	return c.Subscribe(ctx, "platon", channel, args...)
+	return c.Subscribe(ctx, "hskchain", channel, args...)
 }
 
 // ShhSubscribe registers a subscripion under the "shh" namespace.

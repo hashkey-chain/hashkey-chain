@@ -28,9 +28,9 @@ import (
 	"sync"
 	"time"
 
-	json2 "github.com/PlatONnetwork/PlatON-Go/common/json"
+	json2 "github.com/hashkey-chain/hashkey-chain/common/json"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 )
 
 const (
@@ -42,7 +42,7 @@ const (
 	ethMethodPrefix          = "eth_"
 	platonMethodPrefix       = "platon_"
 	ethMethod                = "eth"
-	platonMethod             = "platon"
+	platonMethod             = "hskchain"
 
 	defaultWriteTimeout = 10 * time.Second // used if context has no deadline
 )

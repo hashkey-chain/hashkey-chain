@@ -34,12 +34,12 @@ Guidelines for bug reports:
    reported.
 
 1. **Check if the issue has been fixed** &mdash; look for [closed issues in the
-   current milestone](https://github.com/PlatONnetwork/PlatON-Go/issues?q=is%3Aissue+is%3Aclosed) or try to reproduce it
+   current milestone](https://github.com/hashkey-chain/hashkey-chain/issues?q=is%3Aissue+is%3Aclosed) or try to reproduce it
    using the latest `develop` branch.
 
 A good bug report shouldn't leave others needing to chase you up for more information. Be sure to include the details of your environment and relevant tests that demonstrate the failure.
 
-[Report a bug](https://github.com/PlatONnetwork/PlatON-Go/issues/new?assignees=&labels=bug&template=bug.md&title=)
+[Report a bug](https://github.com/hashkey-chain/hashkey-chain/issues/new?assignees=&labels=bug&template=bug.md&title=)
 
 ### Feature Requests
 
@@ -59,7 +59,7 @@ Change requests cover both architectural and functional changes to how PlatON wo
 
 ## Working on PlatON
 
-Code contributions are welcome and encouraged! If you are looking for a good place to start, check out the [good first issue](https://github.com/PlatONnetwork/PlatON-Go/labels/good%20first%20issue) label in GitHub issues.
+Code contributions are welcome and encouraged! If you are looking for a good place to start, check out the [good first issue](https://github.com/hashkey-chain/hashkey-chain/labels/good%20first%20issue) label in GitHub issues.
 
 Also, please follow these guidelines when submitting code:
 
@@ -67,9 +67,9 @@ Also, please follow these guidelines when submitting code:
 
 To get it out of the way:
 
-- **[feature/xxx](https://github.com/PlatONnetwork/PlatON-Go/tree/feature/bump-version-to-1.1.0)** is the development for new version feature branch. All work on the next version release happens here so you should generally branch off `feature/xxx`. Do **NOT** use this branch for a production site.
-- **[develop](https://github.com/PlatONnetwork/PlatON-Go/tree/develop)** is the development branch. Bug fixes of the current version can be submitted to this branch . Do **NOT** use this branch for a production site.
-- **[master](https://github.com/PlatONnetwork/PlatON-Go/tree/master)** contains the latest release of PlatON. This branch may be used in production. Do **NOT** use this branch to work on PlatON's source.
+- **[feature/xxx](https://github.com/hashkey-chain/hashkey-chain/tree/feature/bump-version-to-1.1.0)** is the development for new version feature branch. All work on the next version release happens here so you should generally branch off `feature/xxx`. Do **NOT** use this branch for a production site.
+- **[develop](https://github.com/hashkey-chain/hashkey-chain/tree/develop)** is the development branch. Bug fixes of the current version can be submitted to this branch . Do **NOT** use this branch for a production site.
+- **[master](https://github.com/hashkey-chain/hashkey-chain/tree/master)** contains the latest release of PlatON. This branch may be used in production. Do **NOT** use this branch to work on PlatON's source.
 
 ### Submitting Pull Requests
 

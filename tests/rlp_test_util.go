@@ -24,7 +24,7 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 )
 
 // RLPTest is the JSON structure of a single RLP test.

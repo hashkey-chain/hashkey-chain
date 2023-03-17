@@ -2,13 +2,13 @@ package staking
 
 import (
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 	"math/big"
 	"strings"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/common/hexutil"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/common/hexutil"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 )
 
 func NewDelegation() *Delegation {

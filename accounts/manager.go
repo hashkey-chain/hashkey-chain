@@ -21,8 +21,8 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/event"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/event"
 )
 
 // Config contains the settings of the global account manager.

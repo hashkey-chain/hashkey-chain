@@ -21,8 +21,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
 )
 
 // StartHTTPEndpoint starts the HTTP RPC endpoint.

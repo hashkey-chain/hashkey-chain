@@ -27,41 +27,41 @@ import (
 
 	mapset "github.com/deckarep/golang-set"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/hexutil"
-	"github.com/PlatONnetwork/PlatON-Go/trie"
+	"github.com/hashkey-chain/hashkey-chain/common/hexutil"
+	"github.com/hashkey-chain/hashkey-chain/trie"
 
 	"github.com/pkg/errors"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
 
 	"reflect"
 	"sync"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/consensus"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/evidence"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/executor"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/fetcher"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/network"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/protocols"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/rules"
-	cstate "github.com/PlatONnetwork/PlatON-Go/consensus/cbft/state"
-	ctypes "github.com/PlatONnetwork/PlatON-Go/consensus/cbft/types"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/utils"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/validator"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/wal"
-	"github.com/PlatONnetwork/PlatON-Go/core/cbfttypes"
-	"github.com/PlatONnetwork/PlatON-Go/core/state"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/event"
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/node"
-	"github.com/PlatONnetwork/PlatON-Go/p2p"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
-	"github.com/PlatONnetwork/PlatON-Go/params"
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/consensus"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/evidence"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/executor"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/fetcher"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/network"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/protocols"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/rules"
+	cstate "github.com/hashkey-chain/hashkey-chain/consensus/cbft/state"
+	ctypes "github.com/hashkey-chain/hashkey-chain/consensus/cbft/types"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/utils"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/validator"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/wal"
+	"github.com/hashkey-chain/hashkey-chain/core/cbfttypes"
+	"github.com/hashkey-chain/hashkey-chain/core/state"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/event"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/node"
+	"github.com/hashkey-chain/hashkey-chain/p2p"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/params"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
 )
 
 const (
@@ -851,7 +851,7 @@ func (cbft *Cbft) APIs(chain consensus.ChainReader) []rpc.API {
 			Public:    true,
 		},
 		{
-			Namespace: "platon",
+			Namespace: "hskchain",
 			Version:   "1.0",
 			Service:   NewPublicPlatonConsensusAPI(cbft),
 			Public:    true,

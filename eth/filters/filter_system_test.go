@@ -25,19 +25,19 @@ import (
 	"testing"
 	"time"
 
-	ethereum "github.com/PlatONnetwork/PlatON-Go"
+	ethereum "github.com/hashkey-chain/hashkey-chain"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/consensus"
-	"github.com/PlatONnetwork/PlatON-Go/core"
-	"github.com/PlatONnetwork/PlatON-Go/core/bloombits"
-	"github.com/PlatONnetwork/PlatON-Go/core/rawdb"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/ethdb"
-	"github.com/PlatONnetwork/PlatON-Go/event"
-	"github.com/PlatONnetwork/PlatON-Go/params"
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
-	_ "github.com/PlatONnetwork/PlatON-Go/x/xcom"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/consensus"
+	"github.com/hashkey-chain/hashkey-chain/core"
+	"github.com/hashkey-chain/hashkey-chain/core/bloombits"
+	"github.com/hashkey-chain/hashkey-chain/core/rawdb"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/ethdb"
+	"github.com/hashkey-chain/hashkey-chain/event"
+	"github.com/hashkey-chain/hashkey-chain/params"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
+	_ "github.com/hashkey-chain/hashkey-chain/x/xcom"
 )
 
 type testBackend struct {

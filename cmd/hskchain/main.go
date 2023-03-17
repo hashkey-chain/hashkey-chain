@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU General Public License
 // along with go-ethereum. If not, see <http://www.gnu.org/licenses/>.
 
-// platon is the official command-line client for Ethereum.
+// hskchain is the official command-line client for Ethereum.
 package main
 
 import (
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/console/prompt"
+	"github.com/hashkey-chain/hashkey-chain/console/prompt"
 	"math"
 	"os"
 	"runtime"
@@ -32,23 +32,23 @@ import (
 	"github.com/panjf2000/ants/v2"
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts"
-	"github.com/PlatONnetwork/PlatON-Go/accounts/keystore"
-	"github.com/PlatONnetwork/PlatON-Go/cmd/utils"
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
-	"github.com/PlatONnetwork/PlatON-Go/eth"
-	"github.com/PlatONnetwork/PlatON-Go/ethclient"
-	"github.com/PlatONnetwork/PlatON-Go/internal/debug"
-	"github.com/PlatONnetwork/PlatON-Go/internal/ethapi"
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/metrics"
-	"github.com/PlatONnetwork/PlatON-Go/node"
+	"github.com/hashkey-chain/hashkey-chain/accounts"
+	"github.com/hashkey-chain/hashkey-chain/accounts/keystore"
+	"github.com/hashkey-chain/hashkey-chain/cmd/utils"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/eth"
+	"github.com/hashkey-chain/hashkey-chain/ethclient"
+	"github.com/hashkey-chain/hashkey-chain/internal/debug"
+	"github.com/hashkey-chain/hashkey-chain/internal/ethapi"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/metrics"
+	"github.com/hashkey-chain/hashkey-chain/node"
 
 	gopsutil "github.com/shirou/gopsutil/mem"
 )
 
 const (
-	clientIdentifier = "platon" // Client identifier to advertise over the network
+	clientIdentifier = "hskchain" // Client identifier to advertise over the network
 )
 
 var (
@@ -56,7 +56,7 @@ var (
 	gitCommit = ""
 	gitDate   = ""
 	// The app that holds all commands and flags.
-	app = utils.NewApp(gitCommit, gitDate, "the platon-go command line interface")
+	app = utils.NewApp(gitCommit, gitDate, "the hskchain-go command line interface")
 	// flags that configure the node
 	nodeFlags = []cli.Flag{
 		utils.IdentityFlag,
@@ -290,7 +290,7 @@ func main() {
 	}
 }
 
-// platon is the main entry point into the system if no special subcommand is ran.
+// hskchain is the main entry point into the system if no special subcommand is ran.
 // It creates a default node based on the command line arguments and runs it in
 // blocking mode, waiting for it to be shut down.
 func platon(ctx *cli.Context) error {

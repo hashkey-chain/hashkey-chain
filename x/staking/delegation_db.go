@@ -1,9 +1,9 @@
 package staking
 
 import (
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 	"github.com/syndtr/goleveldb/leveldb/iterator"
 )
 

@@ -22,9 +22,9 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/PlatONnetwork/PlatON-Go/p2p"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/nat"
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
+	"github.com/hashkey-chain/hashkey-chain/p2p"
+	"github.com/hashkey-chain/hashkey-chain/p2p/nat"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
 )
 
 const (
@@ -74,7 +74,7 @@ func DefaultDataDir() string {
 			}
 			return filepath.Join(appdata, "PlatON")
 		default:
-			return filepath.Join(home, ".platon")
+			return filepath.Join(home, ".hskchain")
 		}
 	}
 	// As we cannot guess a stable location, return empty and handle later

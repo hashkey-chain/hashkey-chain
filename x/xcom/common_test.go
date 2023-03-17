@@ -21,13 +21,13 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/snapshotdb"
+	"github.com/hashkey-chain/hashkey-chain/core/snapshotdb"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/mock"
+	"github.com/hashkey-chain/hashkey-chain/common/mock"
 )
 
 func setup(t *testing.T) *mock.Chain {

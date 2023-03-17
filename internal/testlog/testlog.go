@@ -21,7 +21,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/log"
 )
 
 // Handler returns a log handler which logs to the unit test log of t.

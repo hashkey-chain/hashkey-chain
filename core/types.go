@@ -17,12 +17,12 @@
 package core
 
 import (
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/state"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/core/vm"
+	"github.com/hashkey-chain/hashkey-chain/core/state"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/core/vm"
 )
 
 // Validator is an interface which defines the standard for block validation. It

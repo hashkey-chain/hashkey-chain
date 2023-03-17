@@ -23,8 +23,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts/abi"
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/accounts/abi"
+	"github.com/hashkey-chain/hashkey-chain/common"
 )
 
 // decodedCallData is an internal type to represent a method call parsed according

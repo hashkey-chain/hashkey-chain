@@ -17,7 +17,7 @@
 
 package snapshotdb
 
-import "github.com/PlatONnetwork/PlatON-Go/common"
+import "github.com/hashkey-chain/hashkey-chain/common"
 
 // Putter wraps the database write operation supported by both batches and regular databases.
 type Putter interface {

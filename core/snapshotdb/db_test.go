@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 )
 
 func TestRecover(t *testing.T) {

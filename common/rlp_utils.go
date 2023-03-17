@@ -20,7 +20,7 @@ import (
 	"bytes"
 	"golang.org/x/crypto/sha3"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 )
 
 func MustRlpEncode(val interface{}) []byte {

@@ -27,18 +27,18 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/rawdb"
+	"github.com/hashkey-chain/hashkey-chain/core/rawdb"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/snapshotdb"
+	"github.com/hashkey-chain/hashkey-chain/core/snapshotdb"
 
 	"github.com/prometheus/tsdb/fileutil"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts"
-	"github.com/PlatONnetwork/PlatON-Go/ethdb"
-	"github.com/PlatONnetwork/PlatON-Go/event"
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/p2p"
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
+	"github.com/hashkey-chain/hashkey-chain/accounts"
+	"github.com/hashkey-chain/hashkey-chain/ethdb"
+	"github.com/hashkey-chain/hashkey-chain/event"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/p2p"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
 )
 
 // Node is a container on which services can be registered.
@@ -119,7 +119,7 @@ func New(conf *Config) (*Node, error) {
 		return nil, err
 	}
 	// Ensure that the AccountManager method works before the node has started. We rely on
-	// this in cmd/platon.
+	// this in cmd/hskchain.
 	am, ephemeralKeystore, err := makeAccountManager(conf)
 	if err != nil {
 		return nil, err

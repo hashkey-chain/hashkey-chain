@@ -25,16 +25,16 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts/abi"
+	"github.com/hashkey-chain/hashkey-chain/accounts/abi"
 
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts/abi/bind"
-	"github.com/PlatONnetwork/PlatON-Go/cmd/utils"
-	"github.com/PlatONnetwork/PlatON-Go/common/compiler"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/internal/flags"
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/accounts/abi/bind"
+	"github.com/hashkey-chain/hashkey-chain/cmd/utils"
+	"github.com/hashkey-chain/hashkey-chain/common/compiler"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/internal/flags"
+	"github.com/hashkey-chain/hashkey-chain/log"
 )
 
 var (
@@ -103,7 +103,7 @@ var (
 )
 
 func init() {
-	app = flags.NewApp(gitCommit, gitDate, "platon abi helper tool")
+	app = flags.NewApp(gitCommit, gitDate, "hskchain abi helper tool")
 	app.Flags = []cli.Flag{
 		abiFlag,
 		binFlag,

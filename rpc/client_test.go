@@ -31,7 +31,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/log"
 	"github.com/davecgh/go-spew/spew"
 )
 

@@ -22,8 +22,8 @@ import (
 	"net/http"
 	"sort"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/metrics"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/metrics"
 )
 
 // Handler returns an HTTP handler which dump metrics in Prometheus format.

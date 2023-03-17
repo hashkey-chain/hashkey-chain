@@ -17,9 +17,9 @@
 package core
 
 import (
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/core/cbfttypes"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/core/cbfttypes"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
 )
 
 // NewTxsEvent is posted when a batch of transactions enter the transaction pool.

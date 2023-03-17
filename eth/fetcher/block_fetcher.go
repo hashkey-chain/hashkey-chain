@@ -19,16 +19,16 @@ package fetcher
 
 import (
 	"errors"
-	"github.com/PlatONnetwork/PlatON-Go/metrics"
+	"github.com/hashkey-chain/hashkey-chain/metrics"
 	"math/rand"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/common/prque"
-	"github.com/PlatONnetwork/PlatON-Go/consensus"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/trie"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/common/prque"
+	"github.com/hashkey-chain/hashkey-chain/consensus"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/trie"
 )
 
 const (

@@ -28,7 +28,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp/internal/rlpstruct"
+	"github.com/hashkey-chain/hashkey-chain/rlp/internal/rlpstruct"
 )
 
 //lint:ignore ST1012 EOL is not an error.

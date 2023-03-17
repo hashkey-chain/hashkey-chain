@@ -18,15 +18,15 @@ package gasprice
 
 import (
 	"context"
-	"github.com/PlatONnetwork/PlatON-Go/common/mock"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
+	"github.com/hashkey-chain/hashkey-chain/common/mock"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
 	"math/big"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/params"
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/params"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
 )
 
 type testBackend struct {

@@ -24,8 +24,8 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto/rfc6979"
-	"github.com/PlatONnetwork/PlatON-Go/crypto/secp256k1"
+	"github.com/hashkey-chain/hashkey-chain/crypto/rfc6979"
+	"github.com/hashkey-chain/hashkey-chain/crypto/secp256k1"
 )
 
 const (

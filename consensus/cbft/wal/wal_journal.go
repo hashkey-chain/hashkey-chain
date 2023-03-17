@@ -33,10 +33,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/protocols"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/protocols"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 )
 
 const (

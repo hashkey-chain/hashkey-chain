@@ -39,7 +39,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
 )
 
 func TestKDF(t *testing.T) {

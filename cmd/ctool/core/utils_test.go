@@ -48,7 +48,7 @@ func TestParseAbiFromJson(t *testing.T) {
 
 func TestHttpPostTransfer(t *testing.T) {
 
-	//platon, datadir := prepare(t)
+	//hskchain, datadir := prepare(t)
 	//
 	//param := JsonParam{
 	//	Jsonrpc: "2.0",
@@ -69,11 +69,11 @@ func TestHttpPostTransfer(t *testing.T) {
 	//assert.Nil(t, e, fmt.Sprintf("test http post error: %v", e))
 	//assert.NotEqual(t, r, "", "the result is nil")
 	//t.Log("the result ", r)
-	//clean(platon, datadir)
+	//clean(hskchain, datadir)
 }
 
 func TestHttpPostDeploy(t *testing.T) {
-	//platon, datadir := prepare(t)
+	//hskchain, datadir := prepare(t)
 	//
 	//deployParams := DeployParams{
 	//	From:     from,
@@ -128,11 +128,11 @@ func TestHttpPostDeploy(t *testing.T) {
 	//	fmt.Printf("get contract receipt timeout...more than 100 second.\n")
 	//}
 	//
-	//clean(platon, datadir)
+	//clean(hskchain, datadir)
 }
 
 func TestHttpCallContact(t *testing.T) {
-	//platon, datadir := prepare(t)
+	//hskchain, datadir := prepare(t)
 	//
 	//param1 := uint(33)
 	//b := new(bytes.Buffer)
@@ -159,7 +159,7 @@ func TestHttpCallContact(t *testing.T) {
 	//assert.Nil(t, e, fmt.Sprintf("test http post error: %v", e))
 	//assert.NotEqual(t, r, "", "the result is nil")
 	//t.Log("the result ", r)
-	//clean(platon, datadir)
+	//clean(hskchain, datadir)
 
 }
 

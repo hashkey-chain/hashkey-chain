@@ -19,12 +19,12 @@ package core
 import (
 	"math/big"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/xutil"
+	"github.com/hashkey-chain/hashkey-chain/x/xutil"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/consensus"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/core/vm"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/consensus"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/core/vm"
 )
 
 // ChainContext supports retrieving headers and consensus parameters from the

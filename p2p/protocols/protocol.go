@@ -37,12 +37,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/metrics"
-	"github.com/PlatONnetwork/PlatON-Go/p2p"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
-	//	"github.com/PlatONnetwork/PlatON-Go/swarm/spancontext"
-	//	"github.com/PlatONnetwork/PlatON-Go/swarm/tracing"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/metrics"
+	"github.com/hashkey-chain/hashkey-chain/p2p"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
+	//	"github.com/hashkey-chain/hashkey-chain/swarm/spancontext"
+	//	"github.com/hashkey-chain/hashkey-chain/swarm/tracing"
 )
 
 // error codes used by this  protocol scheme

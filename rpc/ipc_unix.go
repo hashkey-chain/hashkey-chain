@@ -22,7 +22,7 @@ package rpc
 import (
 	"context"
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/log"
 	"net"
 	"os"
 	"path/filepath"

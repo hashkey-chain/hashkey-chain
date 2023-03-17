@@ -2923,7 +2923,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
           inputFormatter: utils.toDecimal
         }),
         new Property({
-          name: 'version.platon',
+          name: 'version.hskchain',
           getter: 'platon_protocolVersion',
           inputFormatter: utils.toDecimal
         })

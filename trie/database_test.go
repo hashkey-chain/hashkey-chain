@@ -19,8 +19,8 @@ package trie
 import (
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/ethdb/memorydb"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/ethdb/memorydb"
 )
 
 // Tests that the trie database returns a missing trie node error if attempting

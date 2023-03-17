@@ -7,8 +7,8 @@ import (
 
 	"github.com/influxdata/influxdb/client"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/metrics"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/metrics"
 )
 
 type reporter struct {

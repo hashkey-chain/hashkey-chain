@@ -25,16 +25,16 @@ import (
 	"os"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/rawdb"
-	"github.com/PlatONnetwork/PlatON-Go/ethdb/memorydb"
+	"github.com/hashkey-chain/hashkey-chain/core/rawdb"
+	"github.com/hashkey-chain/hashkey-chain/ethdb/memorydb"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/PlatONnetwork/PlatON-Go/trie"
+	"github.com/hashkey-chain/hashkey-chain/trie"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/ethdb"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/ethdb"
 )
 
 var toAddr = common.BytesToAddress
@@ -270,7 +270,7 @@ func compareStateObjects(so0, so1 *stateObject, t *testing.T) {
 }
 
 func TestEmptyByte(t *testing.T) {
-	frdir, err := ioutil.TempDir("", "platon")
+	frdir, err := ioutil.TempDir("", "hskchain")
 	if err != nil {
 		t.Fatalf("failed to create temp freezer dir: %v", err)
 	}
@@ -333,9 +333,9 @@ func TestEmptyByte(t *testing.T) {
 }
 
 func TestForEachStorage(t *testing.T) {
-	tmpDir, _ := ioutil.TempDir("", "platon")
+	tmpDir, _ := ioutil.TempDir("", "hskchain")
 	defer os.Remove(tmpDir)
-	db, err := rawdb.NewLevelDBDatabaseWithFreezer(tmpDir, 0, 0, "freezer", "platon")
+	db, err := rawdb.NewLevelDBDatabaseWithFreezer(tmpDir, 0, 0, "freezer", "hskchain")
 	if err != nil {
 		t.Fatalf("Failed to reopen persistent database: %v", err)
 	}
@@ -368,9 +368,9 @@ func TestForEachStorage(t *testing.T) {
 
 func TestMigrateStorage(t *testing.T) {
 
-	tmpDir, _ := ioutil.TempDir("", "platon")
+	tmpDir, _ := ioutil.TempDir("", "hskchain")
 	defer os.Remove(tmpDir)
-	db, err := rawdb.NewLevelDBDatabaseWithFreezer(tmpDir, 0, 0, "freezer", "platon")
+	db, err := rawdb.NewLevelDBDatabaseWithFreezer(tmpDir, 0, 0, "freezer", "hskchain")
 	if err != nil {
 		t.Fatalf("Failed to reopen persistent database: %v", err)
 	}

@@ -20,7 +20,7 @@ package types
 import (
 	"errors"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 )
 
 // EncodeExtra encode cbft version and `QuorumCert` as extra data.

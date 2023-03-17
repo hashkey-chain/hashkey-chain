@@ -23,11 +23,11 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/ethdb/memorydb"
+	"github.com/hashkey-chain/hashkey-chain/ethdb/memorydb"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 )
 
 func TestDecodeNode2(t *testing.T) {

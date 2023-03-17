@@ -21,13 +21,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/validator"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/validator"
 
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/protocols"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/state"
-	ctypes "github.com/PlatONnetwork/PlatON-Go/consensus/cbft/types"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/protocols"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/state"
+	ctypes "github.com/hashkey-chain/hashkey-chain/consensus/cbft/types"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
 )
 
 const (

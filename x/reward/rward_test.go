@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
-	"github.com/PlatONnetwork/PlatON-Go/params"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/params"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 )
 
 func TestDecreaseDelegateReward(t *testing.T) {

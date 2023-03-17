@@ -19,10 +19,10 @@ package rules
 
 import (
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/protocols"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/state"
-	ctypes "github.com/PlatONnetwork/PlatON-Go/consensus/cbft/types"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/protocols"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/state"
+	ctypes "github.com/hashkey-chain/hashkey-chain/consensus/cbft/types"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

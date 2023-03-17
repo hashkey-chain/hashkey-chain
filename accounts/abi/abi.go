@@ -23,8 +23,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
 )
 
 // The ABI holds information about a contract's context and available

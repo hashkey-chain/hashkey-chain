@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/eth/downloader"
-	"github.com/PlatONnetwork/PlatON-Go/p2p"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/eth/downloader"
+	"github.com/hashkey-chain/hashkey-chain/p2p"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 )
 
 // Tests that fast sync gets disabled as soon as a real block is successfully

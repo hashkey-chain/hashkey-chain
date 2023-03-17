@@ -22,7 +22,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/hexutil"
+	"github.com/hashkey-chain/hashkey-chain/common/hexutil"
 )
 
 func TestC(t *testing.T) {

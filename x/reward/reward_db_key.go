@@ -18,11 +18,11 @@
 package reward
 
 import (
-	"github.com/PlatONnetwork/PlatON-Go/x/xutil"
+	"github.com/hashkey-chain/hashkey-chain/x/xutil"
 
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 )
 
 const DelegateRewardPerLength = 1000

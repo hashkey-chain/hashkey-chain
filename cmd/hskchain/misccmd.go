@@ -18,9 +18,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/cmd/utils"
-	"github.com/PlatONnetwork/PlatON-Go/eth"
-	"github.com/PlatONnetwork/PlatON-Go/params"
+	"github.com/hashkey-chain/hashkey-chain/cmd/utils"
+	"github.com/hashkey-chain/hashkey-chain/eth"
+	"github.com/hashkey-chain/hashkey-chain/params"
 	"gopkg.in/urfave/cli.v1"
 	"os"
 	"runtime"
@@ -65,17 +65,17 @@ func version(ctx *cli.Context) error {
 }
 
 func license(_ *cli.Context) error {
-	fmt.Println(`platon is free software: you can redistribute it and/or modify
+	fmt.Println(`hskchain is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-platon is distributed in the hope that it will be useful,
+hskchain is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with platon. If not, see <http://www.gnu.org/licenses/>.`)
+along with hskchain. If not, see <http://www.gnu.org/licenses/>.`)
 	return nil
 }

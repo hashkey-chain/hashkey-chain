@@ -27,7 +27,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 )
 
 // TestPack tests the general pack/unpack tests in packing_test.go

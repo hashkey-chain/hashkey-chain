@@ -17,17 +17,17 @@
 package eth
 
 import (
-	"github.com/PlatONnetwork/PlatON-Go/core/rawdb"
+	"github.com/hashkey-chain/hashkey-chain/core/rawdb"
 	"math/big"
 	"math/rand"
 	"sync/atomic"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/eth/downloader"
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/eth/downloader"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 )
 
 const (

@@ -25,7 +25,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/log"
 )
 
 // handler handles JSON-RPC messages. There is one handler per connection. Note that

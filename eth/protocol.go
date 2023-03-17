@@ -21,11 +21,11 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/core"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/event"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/core"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/event"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 )
 
 // Constants to match up protocol versions and messages
@@ -36,7 +36,7 @@ const (
 )
 
 // protocolName is the official short name of the protocol used during capability negotiation.
-var protocolName = "platon"
+var protocolName = "hskchain"
 
 // ProtocolVersions are the upported versions of the eth protocol (first is primary).
 var ProtocolVersions = []uint{eth65, eth63, eth62}
