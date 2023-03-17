@@ -185,10 +185,10 @@ var (
 )
 
 func init() {
-	// Initialize the CLI app and start PlatON
+	// Initialize the CLI app and start HashKey-Chain
 	app.Action = platon
 	app.HideVersion = true // we have a command to print the version
-	app.Copyright = "Copyright 2019 The PlatON-Go Authors"
+	app.Copyright = "Copyright 2019 The HashKey-Chain Authors"
 	app.Commands = []cli.Command{
 		// See chaincmd.go:
 		initCommand,

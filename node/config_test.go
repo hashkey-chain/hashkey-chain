@@ -91,9 +91,9 @@ func TestIPCPathResolution(t *testing.T) {
 		{"data", "/hskchain.ipc", false, "/hskchain.ipc"},
 		{"", "", true, ``},
 		{"data", "", true, ``},
-		{"", "hskchain.ipc", true, `\\.\pipe\platon.ipc`},
-		{"data", "hskchain.ipc", true, `\\.\pipe\platon.ipc`},
-		{"data", `\\.\pipe\platon.ipc`, true, `\\.\pipe\platon.ipc`},
+		{"", "hskchain.ipc", true, `\\.\pipe\hskchain.ipc`},
+		{"data", "hskchain.ipc", true, `\\.\pipe\hskchain.ipc`},
+		{"data", `\\.\pipe\hskchain.ipc`, true, `\\.\pipe\hskchain.ipc`},
 	}
 	for i, test := range tests {
 		// Only run when platform/test match

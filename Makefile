@@ -18,7 +18,7 @@ hskchain:
 	$(GORUN) build/ci.go install ./cmd/hskchain
 	@mv $(GOBIN)/hskchain $(GOBIN)/hsk-chain
 	@echo "Done building."
-	@echo "Run \"$(GOBIN)/hsk-chain\" to launch hashkey-chain."
+	@echo "Run \"$(GOBIN)/hsk-chain\" to launch HashKey-Chain."
 
 all:
 	build/build_deps.sh

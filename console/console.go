@@ -298,12 +298,12 @@ func (c *Console) AutoCompleteInput(line string, pos int) (string, []string, str
 	return line[:start], c.jsre.CompleteKeywords(line[start:pos]), line[pos:]
 }
 
-// Welcome show summary of current PlatON instance and some metadata about the
+// Welcome show summary of current HashKey-Chain instance and some metadata about the
 // console's available modules.
 func (c *Console) Welcome() {
-	message := "Welcome to the PlatON JavaScript console!\n\n"
+	message := "Welcome to the HashKey-Chain JavaScript console!\n\n"
 
-	// Print some generic PlatON metadata
+	// Print some generic HashKey-Chain metadata
 	if res, err := c.jsre.Run(`
 		var message = "instance: " + web3.version.node + "\n";
 		message += "at block: " + hskchain.blockNumber + " (" + new Date(1000 * hskchain.getBlock(hskchain.blockNumber).timestamp) + ")\n";

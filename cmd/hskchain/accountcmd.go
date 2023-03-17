@@ -148,7 +148,7 @@ For non-interactive use the password can be specified with the -password flag:
     hsk-chain account import [options] <keyfile>
 
 Note:
-As you can directly copy your encrypted accounts to another PlatON instance,
+As you can directly copy your encrypted accounts to another HashKey-Chain instance,
 this import mechanism is not needed when you transfer an account between
 nodes.
 `,
