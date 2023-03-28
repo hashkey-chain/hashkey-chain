@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	DefaultAddressHRP = "lat"
+	DefaultAddressHRP = "hsk"
 )
 
 var currentAddressHRP string

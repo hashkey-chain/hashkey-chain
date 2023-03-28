@@ -118,7 +118,7 @@ func TestWithdrawDelegateRewardWithReward(t *testing.T) {
 	})
 
 	stkDB := staking.NewStakingDBWithDB(chain.SnapDB)
-	index, queue, can, delegate := generateStk(1000, big.NewInt(params.LAT*3), 10)
+	index, queue, can, delegate := generateStk(1000, big.NewInt(params.HSK*3), 10)
 	chain.AddBlockWithSnapDB(true, func(hash common.Hash, header *types.Header, sdb snapshotdb.DB) error {
 		if err := stkDB.SetEpochValIndex(hash, index); err != nil {
 			return err
@@ -299,10 +299,10 @@ func TestWithdrawDelegateRewardWithMultiNode(t *testing.T) {
 	})
 
 	stkDB := staking.NewStakingDBWithDB(chain.SnapDB)
-	index, queue, can, delegate := generateStk(1000, big.NewInt(params.LAT*3), xutil.CalcBlocksEachEpoch()*2+10)
-	_, queue2, can2, delegate2 := generateStk(1000, big.NewInt(params.LAT*3), 10)
+	index, queue, can, delegate := generateStk(1000, big.NewInt(params.HSK*3), xutil.CalcBlocksEachEpoch()*2+10)
+	_, queue2, can2, delegate2 := generateStk(1000, big.NewInt(params.HSK*3), 10)
 	queue = append(queue, queue2...)
-	_, queue3, can3, delegate3 := generateStk(1000, big.NewInt(params.LAT*3), xutil.CalcBlocksEachEpoch()+10)
+	_, queue3, can3, delegate3 := generateStk(1000, big.NewInt(params.HSK*3), xutil.CalcBlocksEachEpoch()+10)
 	queue = append(queue, queue3...)
 	chain.AddBlockWithSnapDB(true, func(hash common.Hash, header *types.Header, sdb snapshotdb.DB) error {
 		if err := stkDB.SetEpochValIndex(hash, index); err != nil {

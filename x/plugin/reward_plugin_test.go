@@ -560,7 +560,7 @@ func TestAllocatePackageBlock(t *testing.T) {
 	defer chain.SnapDB.Clear()
 
 	stkDB := staking.NewStakingDBWithDB(chain.SnapDB)
-	index, queue, can, delegate := generateStk(1000, big.NewInt(params.LAT*3), 10)
+	index, queue, can, delegate := generateStk(1000, big.NewInt(params.HSK*3), 10)
 	if err := chain.AddBlockWithSnapDB(true, func(hash common.Hash, header *types.Header, sdb snapshotdb.DB) error {
 		if err := stkDB.SetEpochValIndex(hash, index); err != nil {
 			return err
@@ -737,7 +737,7 @@ func TestRewardMgrPlugin_GetDelegateReward(t *testing.T) {
 	defer chain.SnapDB.Clear()
 
 	stkDB := staking.NewStakingDBWithDB(chain.SnapDB)
-	index, queue, can, delegate := generateStk(1000, big.NewInt(params.LAT*3), 10)
+	index, queue, can, delegate := generateStk(1000, big.NewInt(params.HSK*3), 10)
 	chain.AddBlockWithSnapDB(true, func(hash common.Hash, header *types.Header, sdb snapshotdb.DB) error {
 		if err := stkDB.SetEpochValIndex(hash, index); err != nil {
 			return err

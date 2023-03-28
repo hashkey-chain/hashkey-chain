@@ -31,7 +31,7 @@ import (
 
 const sampleNumber = 3 // Number of transactions sampled in a block
 
-var DefaultMaxPrice = big.NewInt(500 * params.GVon)
+var DefaultMaxPrice = big.NewInt(500 * params.GHashi)
 
 type Config struct {
 	Blocks     int
