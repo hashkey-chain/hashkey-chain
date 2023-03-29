@@ -27,21 +27,21 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/gov"
+	"github.com/hashkey-chain/hashkey-chain/x/gov"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/restricting"
+	"github.com/hashkey-chain/hashkey-chain/x/restricting"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/slashing"
+	"github.com/hashkey-chain/hashkey-chain/x/slashing"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/staking"
+	"github.com/hashkey-chain/hashkey-chain/x/staking"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/hexutil"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/common/hexutil"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 )
 
 var (
-	errCode = flag.String("errCode", "", "dump given platon ppos tx receipt errCode description")
-	inner   = flag.String("inner", "", "dump given platon inner contract data with `platon.Call`")
+	errCode = flag.String("errCode", "", "dump given hskchain ppos tx receipt errCode description")
+	inner   = flag.String("inner", "", "dump given hskchain inner contract data with `hskchain.Call`")
 	hexMode = flag.String("hex", "", "dump given hex data")
 	noASCII = flag.Bool("noascii", false, "don't print ASCII strings readably")
 	single  = flag.Bool("single", false, "print only the first element, discard the rest")
@@ -60,7 +60,7 @@ If the filename is omitted, data is read from stdin.`)
 func main() {
 	flag.Parse()
 
-	// parse platon ppos tx receipt errCode
+	// parse hskchain ppos tx receipt errCode
 
 	if *errCode != "" {
 		data, err := hex.DecodeString(strings.TrimPrefix(*errCode, "0x"))
@@ -203,7 +203,7 @@ func main() {
 		return
 	}
 
-	// parse platon inner contract data
+	// parse hskchain inner contract data
 	if *inner != "" {
 		rlpByte, err := hexutil.Decode(*inner)
 		if nil != err {

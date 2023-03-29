@@ -20,15 +20,15 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/common/hexutil"
-	"github.com/PlatONnetwork/PlatON-Go/console/prompt"
+	"github.com/hashkey-chain/hashkey-chain/common/hexutil"
+	"github.com/hashkey-chain/hashkey-chain/console/prompt"
 	"os"
 	"strings"
 
 	"sync"
 
-	"github.com/PlatONnetwork/PlatON-Go/internal/ethapi"
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/internal/ethapi"
+	"github.com/hashkey-chain/hashkey-chain/log"
 )
 
 type CommandlineUI struct {

@@ -115,7 +115,7 @@ var customGenesisTests = []struct {
         }
     }
 }`,
-		query:  "platon.getBlock(0).nonce",
+		query:  "hskchain.getBlock(0).nonce",
 		result: "0x0376e56dffd12ab53bb149bda4e0cbce2b6aabe4cccc0df0b5a39e12977a2fcd23000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
 	},
 	//Genesis file with only cbft config
@@ -205,7 +205,7 @@ var customGenesisTests = []struct {
         }
     }
 }`,
-		query:  "platon.getBlock(0).nonce",
+		query:  "hskchain.getBlock(0).nonce",
 		result: "0x0376e56dffd12ab53bb149bda4e0cbce2b6aabe4cccc0df0b5a39e12977a2fcd23000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
 	},
 	//Genesis file with specific chain configurations
@@ -298,12 +298,12 @@ var customGenesisTests = []struct {
         }
     }
 }`,
-		query:  "platon.getBlock(0).nonce",
+		query:  "hskchain.getBlock(0).nonce",
 		result: "0x0376e56dffd12ab53bb149bda4e0cbce2b6aabe4cccc0df0b5a39e12977a2fcd23000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
 	},
 }
 
-// Tests that initializing PlatON with a custom genesis block and chain definitions
+// Tests that initializing HashKey-Chain with a custom genesis block and chain definitions
 // work properly.
 func TestCustomGenesis(t *testing.T) {
 	for i, tt := range customGenesisTests {

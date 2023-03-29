@@ -34,9 +34,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/xcom"
+	"github.com/hashkey-chain/hashkey-chain/x/xcom"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/log"
 )
 
 func GetLogVerbosity() log.Lvl {

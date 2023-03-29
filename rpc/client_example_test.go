@@ -19,10 +19,10 @@ package rpc_test
 import (
 	"context"
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/common/hexutil"
+	"github.com/hashkey-chain/hashkey-chain/common/hexutil"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
 )
 
 // In this example, our client wishes to track the latest 'block number'

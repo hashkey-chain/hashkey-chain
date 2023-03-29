@@ -18,7 +18,7 @@
 package types
 
 import (
-	"github.com/PlatONnetwork/PlatON-Go/common/math"
+	"github.com/hashkey-chain/hashkey-chain/common/math"
 	"sync"
 	"time"
 )

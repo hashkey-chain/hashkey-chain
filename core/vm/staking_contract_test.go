@@ -25,28 +25,28 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/staking"
-	"github.com/PlatONnetwork/PlatON-Go/x/xutil"
+	"github.com/hashkey-chain/hashkey-chain/x/staking"
+	"github.com/hashkey-chain/hashkey-chain/x/xutil"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/params"
-	"github.com/PlatONnetwork/PlatON-Go/x/gov"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/params"
+	"github.com/hashkey-chain/hashkey-chain/x/gov"
 
-	"github.com/PlatONnetwork/PlatON-Go/node"
+	"github.com/hashkey-chain/hashkey-chain/node"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/mock"
+	"github.com/hashkey-chain/hashkey-chain/common/mock"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/common/hexutil"
-	"github.com/PlatONnetwork/PlatON-Go/core/snapshotdb"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
-	"github.com/PlatONnetwork/PlatON-Go/x/plugin"
-	"github.com/PlatONnetwork/PlatON-Go/x/xcom"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/common/hexutil"
+	"github.com/hashkey-chain/hashkey-chain/core/snapshotdb"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
+	"github.com/hashkey-chain/hashkey-chain/x/plugin"
+	"github.com/hashkey-chain/hashkey-chain/x/xcom"
 )
 
 func runContractSendTransaction(contract *StakingContract, params [][]byte, title string, t *testing.T) {

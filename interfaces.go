@@ -14,16 +14,16 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
-// Package platon defines interfaces for interacting with platon.
-package platon
+// Package hskchain defines interfaces for interacting with hskchain.
+package hskchain
 
 import (
 	"context"
 	"errors"
 	"math/big"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
 )
 
 // NotFound is returned by API methods if the requested item does not exist.

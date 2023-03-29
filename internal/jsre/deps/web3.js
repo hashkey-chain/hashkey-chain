@@ -2843,7 +2843,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
     function Web3 (provider) {
       this._requestManager = new RequestManager(provider);
       this.currentProvider = provider;
-      this.platon = new Eth(this);
+      this.hskchain = new Eth(this);
       this.db = new DB(this);
       // this.shh = new Shh(this);
       this.net = new Net(this);
@@ -2923,8 +2923,8 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
           inputFormatter: utils.toDecimal
         }),
         new Property({
-          name: 'version.platon',
-          getter: 'platon_protocolVersion',
+          name: 'version.hskchain',
+          getter: 'hskchain_protocolVersion',
           inputFormatter: utils.toDecimal
         })
         // new Property({
@@ -4526,7 +4526,7 @@ var inputAddressFormatter = function (address) {
       var format = this.unpackOutput.bind(this);
 
       return {
-        method: this._constant ? 'platon_call' : 'platon_sendTransaction',
+        method: this._constant ? 'hskchain_call' : 'hskchain_sendTransaction',
         callback: callback,
         params: [payload],
         format: format
@@ -5536,15 +5536,15 @@ var inputAddressFormatter = function (address) {
     var transfer = require('../transfer');
 
     var blockCall = function (args) {
-      return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "platon_getBlockByHash" : "platon_getBlockByNumber";
+      return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "hskchain_getBlockByHash" : "hskchain_getBlockByNumber";
     };
 
     var transactionFromBlockCall = function (args) {
-      return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'platon_getTransactionByBlockHashAndIndex' : 'platon_getTransactionByBlockNumberAndIndex';
+      return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'hskchain_getTransactionByBlockHashAndIndex' : 'hskchain_getTransactionByBlockNumberAndIndex';
     };
 
     var getBlockTransactionCountCall = function (args) {
-      return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'platon_getBlockTransactionCountByHash' : 'platon_getBlockTransactionCountByNumber';
+      return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'hskchain_getBlockTransactionCountByHash' : 'hskchain_getBlockTransactionCountByNumber';
     };
 
     function Eth(web3) {
@@ -5586,13 +5586,13 @@ var inputAddressFormatter = function (address) {
     var methods = function () {
       var getAddressHrp = new Method({
         name: 'getAddressHrp',
-        call: 'platon_getAddressHrp',
+        call: 'hskchain_getAddressHrp',
         params: 0,
       });
 
       var getBalance = new Method({
         name: 'getBalance',
-        call: 'platon_getBalance',
+        call: 'hskchain_getBalance',
         params: 2,
         inputFormatter: [formatters.inputAddressFormatter, formatters.inputDefaultBlockNumberFormatter],
         outputFormatter: formatters.outputBigNumberFormatter
@@ -5600,14 +5600,14 @@ var inputAddressFormatter = function (address) {
 
       var getStorageAt = new Method({
         name: 'getStorageAt',
-        call: 'platon_getStorageAt',
+        call: 'hskchain_getStorageAt',
         params: 3,
         inputFormatter: [null, utils.toHex, formatters.inputDefaultBlockNumberFormatter]
       });
 
       var getCode = new Method({
         name: 'getCode',
-        call: 'platon_getCode',
+        call: 'hskchain_getCode',
         params: 2,
         inputFormatter: [formatters.inputAddressFormatter, formatters.inputDefaultBlockNumberFormatter]
       });
@@ -5630,7 +5630,7 @@ var inputAddressFormatter = function (address) {
 
       var getTransaction = new Method({
         name: 'getTransaction',
-        call: 'platon_getTransactionByHash',
+        call: 'hskchain_getTransactionByHash',
         params: 1,
         outputFormatter: formatters.outputTransactionFormatter
       });
@@ -5645,14 +5645,14 @@ var inputAddressFormatter = function (address) {
 
       var getTransactionReceipt = new Method({
         name: 'getTransactionReceipt',
-        call: 'platon_getTransactionReceipt',
+        call: 'hskchain_getTransactionReceipt',
         params: 1,
         outputFormatter: formatters.outputTransactionReceiptFormatter
       });
 
       var getTransactionCount = new Method({
         name: 'getTransactionCount',
-        call: 'platon_getTransactionCount',
+        call: 'hskchain_getTransactionCount',
         params: 2,
         inputFormatter: [null, formatters.inputDefaultBlockNumberFormatter],
         outputFormatter: utils.toDecimal
@@ -5660,42 +5660,42 @@ var inputAddressFormatter = function (address) {
 
       var sendRawTransaction = new Method({
         name: 'sendRawTransaction',
-        call: 'platon_sendRawTransaction',
+        call: 'hskchain_sendRawTransaction',
         params: 1,
         inputFormatter: [null]
       });
 
       var sendTransaction = new Method({
         name: 'sendTransaction',
-        call: 'platon_sendTransaction',
+        call: 'hskchain_sendTransaction',
         params: 1,
         inputFormatter: [formatters.inputTransactionFormatter]
       });
 
       var signTransaction = new Method({
         name: 'signTransaction',
-        call: 'platon_signTransaction',
+        call: 'hskchain_signTransaction',
         params: 1,
         inputFormatter: [formatters.inputTransactionFormatter]
       });
 
       var sign = new Method({
         name: 'sign',
-        call: 'platon_sign',
+        call: 'hskchain_sign',
         params: 2,
         inputFormatter: [formatters.inputAddressFormatter, null]
       });
 
       var call = new Method({
         name: 'call',
-        call: 'platon_call',
+        call: 'hskchain_call',
         params: 2,
         inputFormatter: [formatters.inputCallFormatter, formatters.inputDefaultBlockNumberFormatter]
       });
 
       var estimateGas = new Method({
         name: 'estimateGas',
-        call: 'platon_estimateGas',
+        call: 'hskchain_estimateGas',
         params: 1,
         inputFormatter: [formatters.inputCallFormatter],
         outputFormatter: utils.toDecimal
@@ -5704,7 +5704,7 @@ var inputAddressFormatter = function (address) {
 
       var evidences = new Method({
         name: 'evidences',
-        call: 'platon_evidences',
+        call: 'hskchain_evidences',
         params: 0
       });
 
@@ -5734,26 +5734,26 @@ var inputAddressFormatter = function (address) {
       return [
         new Property({
           name: 'syncing',
-          getter: 'platon_syncing',
+          getter: 'hskchain_syncing',
           outputFormatter: formatters.outputSyncingFormatter
         }),
         new Property({
           name: 'gasPrice',
-          getter: 'platon_gasPrice',
+          getter: 'hskchain_gasPrice',
           outputFormatter: formatters.outputBigNumberFormatter
         }),
         new Property({
           name: 'accounts',
-          getter: 'platon_accounts'
+          getter: 'hskchain_accounts'
         }),
         new Property({
           name: 'blockNumber',
-          getter: 'platon_blockNumber',
+          getter: 'hskchain_blockNumber',
           outputFormatter: utils.toDecimal
         }),
         new Property({
           name: 'protocolVersion',
-          getter: 'platon_protocolVersion'
+          getter: 'hskchain_protocolVersion'
         })
       ];
     };
@@ -5978,13 +5978,13 @@ var inputAddressFormatter = function (address) {
           case 'latest':
             args.shift();
             this.params = 0;
-            return 'platon_newBlockFilter';
+            return 'hskchain_newBlockFilter';
           case 'pending':
             args.shift();
             this.params = 0;
-            return 'platon_newPendingTransactionFilter';
+            return 'hskchain_newPendingTransactionFilter';
           default:
-            return 'platon_newFilter';
+            return 'hskchain_newFilter';
         }
       };
 
@@ -5996,19 +5996,19 @@ var inputAddressFormatter = function (address) {
 
       var uninstallFilter = new Method({
         name: 'uninstallFilter',
-        call: 'platon_uninstallFilter',
+        call: 'hskchain_uninstallFilter',
         params: 1
       });
 
       var getLogs = new Method({
         name: 'getLogs',
-        call: 'platon_getFilterLogs',
+        call: 'hskchain_getFilterLogs',
         params: 1
       });
 
       var poll = new Method({
         name: 'poll',
-        call: 'platon_getFilterChanges',
+        call: 'hskchain_getFilterChanges',
         params: 1
       });
 
@@ -6571,7 +6571,7 @@ var inputAddressFormatter = function (address) {
       };
 
       self.requestManager.startPolling({
-        method: 'platon_syncing',
+        method: 'hskchain_syncing',
         params: [],
       }, self.pollId, onMessage, self.stopWatching.bind(self));
 

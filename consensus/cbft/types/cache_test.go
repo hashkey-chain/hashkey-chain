@@ -18,7 +18,7 @@
 package types
 
 import (
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"

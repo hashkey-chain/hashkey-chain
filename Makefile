@@ -13,54 +13,22 @@ GO ?= latest
 GPATH = $(shell go env GOPATH)
 GORUN = env GO111MODULE=on GOPATH=$(GPATH) go run
 
-platon:
+hskchain:
 	build/build_deps.sh
-	$(GORUN) build/ci.go install ./cmd/platon
+	$(GORUN) build/ci.go install ./cmd/hskchain
+	@mv $(GOBIN)/hskchain $(GOBIN)/hsk-chain
 	@echo "Done building."
-	@echo "Run \"$(GOBIN)/platon\" to launch platon."
-
-platon-with-mpc:
-	build/build_deps.sh
-	$(GORUN) build/ci.go install -mpc on ./cmd/platon
-	@echo "Done building platon with mpc."
-	@echo "Run \"$(GOBIN)/platon\" to launch platon."
-
-platon-with-vc:
-	build/build_deps.sh
-	build/build_snark.sh
-	$(GORUN) build/ci.go install -vc on ./cmd/platon
-	@echo "Done building platon with vc."
-	@echo "Run \"$(GOBIN)/platon\" to launch platon."
-
-platon-with-mv:
-	build/build_deps.sh
-	build/build_snark.sh
-	$(GORUN) build/ci.go install -mv on ./cmd/platon
-	@echo "Done building platon with vc."
-	@echo "Run \"$(GOBIN)/platon\" to launch platon."
+	@echo "Run \"$(GOBIN)/hsk-chain\" to launch HashKey-Chain."
 
 all:
 	build/build_deps.sh
 	$(GORUN) build/ci.go install
-	@mv $(GOBIN)/keytool $(GOBIN)/platonkey
+	@mv $(GOBIN)/hskchain $(GOBIN)/hsk-chain
+	@mv $(GOBIN)/keytool $(GOBIN)/hsk-chain-key
 
 all-debug:
 	build/build_deps.sh
 	$(GORUN) build/ci.go install -gcflags on
-
-all-with-mpc:
-	build/build_deps.sh
-	$(GORUN) build/ci.go install -mpc on
-
-all-with-vc:
-	build/build_deps.sh
-	build/build_snark.sh
-	$(GORUN) build/ci.go install -vc on
-
-all-with-mv:
-	build/build_deps.sh
-	build/build_snark.sh
-	$(GORUN) build/ci.go install -mv on
 
 android:
 	$(GORUN) build/ci.go aar --local

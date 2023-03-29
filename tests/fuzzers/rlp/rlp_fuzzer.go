@@ -19,8 +19,8 @@ package rlp
 import (
 	"bytes"
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 )
 
 func decodeEncode(input []byte, val interface{}, i int) {

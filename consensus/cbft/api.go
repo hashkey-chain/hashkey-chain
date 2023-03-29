@@ -20,9 +20,9 @@ package cbft
 import (
 	"encoding/json"
 
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/state"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/types"
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/state"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/types"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
 )
 
 type Status struct {

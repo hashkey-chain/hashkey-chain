@@ -22,9 +22,9 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/PlatONnetwork/PlatON-Go/p2p"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/nat"
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
+	"github.com/hashkey-chain/hashkey-chain/p2p"
+	"github.com/hashkey-chain/hashkey-chain/p2p/nat"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
 )
 
 const (
@@ -62,19 +62,19 @@ func DefaultDataDir() string {
 	if home != "" {
 		switch runtime.GOOS {
 		case "darwin":
-			return filepath.Join(home, "Library", "PlatON")
+			return filepath.Join(home, "Library", "hskchain")
 		case "windows":
 			// We used to put everything in %HOME%\AppData\Roaming, but this caused
 			// problems with non-typical setups. If this fallback location exists and
 			// is non-empty, use it, otherwise DTRT and check %LOCALAPPDATA%.
-			fallback := filepath.Join(home, "AppData", "Roaming", "PlatON")
+			fallback := filepath.Join(home, "AppData", "Roaming", "hskchain")
 			appdata := windowsAppData()
 			if appdata == "" || isNonEmptyDir(fallback) {
 				return fallback
 			}
-			return filepath.Join(appdata, "PlatON")
+			return filepath.Join(appdata, "hskchain")
 		default:
-			return filepath.Join(home, ".platon")
+			return filepath.Join(home, ".hskchain")
 		}
 	}
 	// As we cannot guess a stable location, return empty and handle later

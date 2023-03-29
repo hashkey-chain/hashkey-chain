@@ -7,7 +7,7 @@ import (
 	"go/types"
 	"sort"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp/internal/rlpstruct"
+	"github.com/hashkey-chain/hashkey-chain/rlp/internal/rlpstruct"
 )
 
 // buildContext keeps the data needed for make*Op.

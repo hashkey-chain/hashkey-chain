@@ -26,17 +26,17 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts"
-	"github.com/PlatONnetwork/PlatON-Go/accounts/keystore"
-	"github.com/PlatONnetwork/PlatON-Go/accounts/usbwallet"
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/p2p"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
+	"github.com/hashkey-chain/hashkey-chain/accounts"
+	"github.com/hashkey-chain/hashkey-chain/accounts/keystore"
+	"github.com/hashkey-chain/hashkey-chain/accounts/usbwallet"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/p2p"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
 )
 
 const (
@@ -54,7 +54,7 @@ const (
 // all registered services.
 type Config struct {
 	// Name sets the instance name of the node. It must not contain the / character and is
-	// used in the devp2p node identifier. The instance name of platon is "platon". If no
+	// used in the devp2p node identifier. The instance name of hashkey-chain is "hskchain". If no
 	// value is specified, the basename of the current executable is used.
 	Name string `toml:"-"`
 
@@ -267,8 +267,8 @@ func (c *Config) ExtRPCEnabled() bool {
 // NodeName returns the devp2p node identifier.
 func (c *Config) NodeName() string {
 	name := c.name()
-	if name == "platon" || name == "platon-testnet" || name == "platon-betanet" || name == "platon-innertestnet" || name == "platon-innerdevnet" {
-		name = "PlatONnetwork"
+	if name == "hskchain" || name == "hskchain-testnet" || name == "hskchain-betanet" || name == "hskchain-innertestnet" || name == "hskchain-innerdevnet" {
+		name = "hashkey-chain"
 	}
 	if c.UserIdent != "" {
 		name += "/" + c.UserIdent
@@ -292,8 +292,8 @@ func (c *Config) name() string {
 	return c.Name
 }
 
-// These resources are resolved differently for "platon" instances.
-var isOldPlatONResource = map[string]bool{
+// These resources are resolved differently for "hskchain" instances.
+var isOldHskChainResource = map[string]bool{
 	"chaindata":          true,
 	"nodes":              true,
 	"nodekey":            true,
@@ -325,15 +325,15 @@ func (c *Config) ResolvePath(path string) string {
 		return ""
 	}
 	// Backwards-compatibility: ensure that data directory files created
-	// by platon 1.4 are used if they exist.
-	if warn, isOld := isOldPlatONResource[path]; isOld {
+	// by hskchain 1.4 are used if they exist.
+	if warn, isOld := isOldHskChainResource[path]; isOld {
 		oldpath := ""
-		if c.name() == "platon" {
+		if c.name() == "hskchain" {
 			oldpath = filepath.Join(c.DataDir, path)
 		}
 		if oldpath != "" && common.FileExist(oldpath) {
 			if warn {
-				c.warnOnce(&c.oldGethResourceWarning, "Using deprecated resource file %s, please move this file to the 'platon' subdirectory of datadir.", oldpath)
+				c.warnOnce(&c.oldGethResourceWarning, "Using deprecated resource file %s, please move this file to the 'hskchain' subdirectory of datadir.", oldpath)
 			}
 			return oldpath
 		}

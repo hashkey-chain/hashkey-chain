@@ -25,14 +25,14 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/consensus/cbft/utils"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/consensus/cbft/utils"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/consensus"
+	"github.com/hashkey-chain/hashkey-chain/common/consensus"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
 
 	"github.com/stretchr/testify/assert"
 )

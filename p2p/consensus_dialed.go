@@ -2,8 +2,8 @@ package p2p
 
 import (
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/log"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/log"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 	"strings"
 )
 

@@ -12,23 +12,23 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/hexutil"
-	"github.com/PlatONnetwork/PlatON-Go/common/vm"
-	"github.com/PlatONnetwork/PlatON-Go/x/gov"
+	"github.com/hashkey-chain/hashkey-chain/common/hexutil"
+	"github.com/hashkey-chain/hashkey-chain/common/vm"
+	"github.com/hashkey-chain/hashkey-chain/x/gov"
 
-	"github.com/PlatONnetwork/PlatON-Go/params"
+	"github.com/hashkey-chain/hashkey-chain/params"
 
 	"golang.org/x/crypto/ripemd160"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
 
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/common/mock"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/common/mock"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/math"
+	"github.com/hashkey-chain/hashkey-chain/common/math"
 
 	"github.com/PlatONnetwork/wagon/exec"
 	"github.com/stretchr/testify/assert"
@@ -1296,7 +1296,7 @@ var testCase = []*Case{
 		},
 	},
 
-	// platon clone error
+	// hskchain clone error
 	{
 		ctx: &VMContext{
 			gasTable: params.GasTableConstantinople,

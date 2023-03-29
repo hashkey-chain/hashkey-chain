@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts"
-	"github.com/PlatONnetwork/PlatON-Go/accounts/keystore"
-	"github.com/PlatONnetwork/PlatON-Go/cmd/utils"
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/accounts"
+	"github.com/hashkey-chain/hashkey-chain/accounts/keystore"
+	"github.com/hashkey-chain/hashkey-chain/cmd/utils"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/log"
 )
 
 var (
@@ -50,7 +50,7 @@ Note that exporting your key in unencrypted format is NOT supported.
 
 Keys are stored under <DATADIR>/keystore.
 It is safe to transfer the entire directory or the individual keys therein
-between PlatON nodes by simply copying.
+between HashKey-Chain nodes by simply copying.
 
 Make sure you backup your keys regularly.`,
 		Subcommands: []cli.Command{
@@ -77,7 +77,7 @@ Print a short summary of all accounts`,
 					utils.AddressHRPFlag,
 				},
 				Description: `
-    platon account new
+    hsk-chain account new
 
 Creates a new account and prints the address.
 
@@ -102,7 +102,7 @@ password to file or expose in any other way.
 					utils.LightKDFFlag,
 				},
 				Description: `
-    platon account update <address>
+    hsk-chain account update <address>
 
 Update an existing account.
 
@@ -114,7 +114,7 @@ format to the newest format or change the password for an account.
 
 For non-interactive use the password can be specified with the --password flag:
 
-    platon account update [options] <address>
+    hsk-chain account update [options] <address>
 
 Since only one password can be given, only format update can be performed,
 changing your password is only possible interactively.
@@ -132,7 +132,7 @@ changing your password is only possible interactively.
 				},
 				ArgsUsage: "<keyFile>",
 				Description: `
-    platon account import <keyfile>
+    hsk-chain account import <keyfile>
 
 Imports an unencrypted private key from <keyfile> and creates a new account.
 Prints the address.
@@ -145,10 +145,10 @@ You must remember this password to unlock your account in the future.
 
 For non-interactive use the password can be specified with the -password flag:
 
-    platon account import [options] <keyfile>
+    hsk-chain account import [options] <keyfile>
 
 Note:
-As you can directly copy your encrypted accounts to another PlatON instance,
+As you can directly copy your encrypted accounts to another HashKey-Chain instance,
 this import mechanism is not needed when you transfer an account between
 nodes.
 `,

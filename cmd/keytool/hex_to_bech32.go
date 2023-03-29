@@ -7,10 +7,10 @@ import (
 
 	"github.com/btcsuite/btcd/btcutil/bech32"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/bech32util"
+	"github.com/hashkey-chain/hashkey-chain/common/bech32util"
 
-	"github.com/PlatONnetwork/PlatON-Go/cmd/utils"
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/cmd/utils"
+	"github.com/hashkey-chain/hashkey-chain/common"
 
 	"gopkg.in/urfave/cli.v1"
 )

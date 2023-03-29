@@ -24,8 +24,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/p2p"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/p2p"
 )
 
 // Tests that datadirs can be successfully created, be them manually configured
@@ -85,15 +85,15 @@ func TestIPCPathResolution(t *testing.T) {
 	}{
 		{"", "", false, ""},
 		{"data", "", false, ""},
-		{"", "platon.ipc", false, filepath.Join(os.TempDir(), "platon.ipc")},
-		{"data", "platon.ipc", false, "data/platon.ipc"},
-		{"data", "./platon.ipc", false, "./platon.ipc"},
-		{"data", "/platon.ipc", false, "/platon.ipc"},
+		{"", "hskchain.ipc", false, filepath.Join(os.TempDir(), "hskchain.ipc")},
+		{"data", "hskchain.ipc", false, "data/hskchain.ipc"},
+		{"data", "./hskchain.ipc", false, "./hskchain.ipc"},
+		{"data", "/hskchain.ipc", false, "/hskchain.ipc"},
 		{"", "", true, ``},
 		{"data", "", true, ``},
-		{"", "platon.ipc", true, `\\.\pipe\platon.ipc`},
-		{"data", "platon.ipc", true, `\\.\pipe\platon.ipc`},
-		{"data", `\\.\pipe\platon.ipc`, true, `\\.\pipe\platon.ipc`},
+		{"", "hskchain.ipc", true, `\\.\pipe\hskchain.ipc`},
+		{"data", "hskchain.ipc", true, `\\.\pipe\hskchain.ipc`},
+		{"data", `\\.\pipe\hskchain.ipc`, true, `\\.\pipe\hskchain.ipc`},
 	}
 	for i, test := range tests {
 		// Only run when platform/test match

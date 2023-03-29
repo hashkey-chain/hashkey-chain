@@ -21,13 +21,13 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/consensus"
+	"github.com/hashkey-chain/hashkey-chain/common/consensus"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
 )
 
 const (

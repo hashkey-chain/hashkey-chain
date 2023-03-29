@@ -30,7 +30,7 @@ import (
 
 	"github.com/docker/docker/pkg/reexec"
 
-	"github.com/PlatONnetwork/PlatON-Go/internal/cmdtest"
+	"github.com/hashkey-chain/hashkey-chain/internal/cmdtest"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -156,7 +156,7 @@ func prepare(t *testing.T) (*testPlatON, string) {
 	port := strings.Split(config.Url, ":")[2] // http://localhost:6789
 	platon := runPlatON(t,
 		"--datadir", datadir, "--port", "0", "--nodiscover", "--nat", "none",
-		"--rpc", "--rpcaddr", "0.0.0.0", "--rpcport", port, "--rpcapi", "txpool,platon,net,web3,miner,admin,personal,version")
+		"--rpc", "--rpcaddr", "0.0.0.0", "--rpcport", port, "--rpcapi", "txpool,hskchain,net,web3,miner,admin,personal,version")
 
 	time.Sleep(2 * time.Second) // Simple way to wait for the RPC endpoint to open
 
@@ -188,7 +188,7 @@ func trulyRandInt(lo, hi int) int {
 }
 
 func tmpdir(t *testing.T) string {
-	dir, err := ioutil.TempDir("", "platon-test")
+	dir, err := ioutil.TempDir("", "hskchain-test")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -217,9 +217,9 @@ func runPlatON(t *testing.T, args ...string) *testPlatON {
 			}
 		}()
 	}
-	t.Log("run platon args: ", strings.Join(args, " "))
+	t.Log("run hskchain args: ", strings.Join(args, " "))
 
-	tt.Run("platon-test", args...)
+	tt.Run("hskchain-test", args...)
 
 	return tt
 }

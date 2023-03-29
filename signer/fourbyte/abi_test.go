@@ -22,8 +22,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts/abi"
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/accounts/abi"
+	"github.com/hashkey-chain/hashkey-chain/common"
 )
 
 func verify(t *testing.T, jsondata, calldata string, exp []interface{}) {

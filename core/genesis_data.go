@@ -5,22 +5,22 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
 
-	"github.com/PlatONnetwork/PlatON-Go/params"
-	"github.com/PlatONnetwork/PlatON-Go/x/gov"
-	"github.com/PlatONnetwork/PlatON-Go/x/plugin"
+	"github.com/hashkey-chain/hashkey-chain/params"
+	"github.com/hashkey-chain/hashkey-chain/x/gov"
+	"github.com/hashkey-chain/hashkey-chain/x/plugin"
 
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/log"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/common/vm"
-	"github.com/PlatONnetwork/PlatON-Go/core/snapshotdb"
-	"github.com/PlatONnetwork/PlatON-Go/core/state"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
-	"github.com/PlatONnetwork/PlatON-Go/x/staking"
-	"github.com/PlatONnetwork/PlatON-Go/x/xcom"
-	"github.com/PlatONnetwork/PlatON-Go/x/xutil"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/common/vm"
+	"github.com/hashkey-chain/hashkey-chain/core/snapshotdb"
+	"github.com/hashkey-chain/hashkey-chain/core/state"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
+	"github.com/hashkey-chain/hashkey-chain/x/staking"
+	"github.com/hashkey-chain/hashkey-chain/x/xcom"
+	"github.com/hashkey-chain/hashkey-chain/x/xutil"
 )
 
 func genesisStakingData(prevHash common.Hash, snapdb snapshotdb.BaseDB, g *Genesis, stateDB *state.StateDB) (common.Hash, error) {
@@ -84,9 +84,9 @@ func genesisStakingData(prevHash common.Hash, snapdb snapshotdb.BaseDB, g *Genes
 			StakingBlockNum: uint64(0),
 			Description: staking.Description{
 				ExternalId: "",
-				NodeName:   "platon.node." + fmt.Sprint(index+1),
-				Website:    "www.platon.network",
-				Details:    "The PlatON Node",
+				NodeName:   "hskchain.node." + fmt.Sprint(index+1),
+				Website:    "www.hskchain.network",
+				Details:    "The HashKey-Chain Node",
 			},
 		}
 

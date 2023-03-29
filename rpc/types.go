@@ -23,9 +23,9 @@ import (
 	"math"
 	"strings"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
+	"github.com/hashkey-chain/hashkey-chain/common"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/hexutil"
+	"github.com/hashkey-chain/hashkey-chain/common/hexutil"
 )
 
 // API describes the set of methods offered over the RPC interface

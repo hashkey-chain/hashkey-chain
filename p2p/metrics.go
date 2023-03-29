@@ -21,7 +21,7 @@ package p2p
 import (
 	"net"
 
-	"github.com/PlatONnetwork/PlatON-Go/metrics"
+	"github.com/hashkey-chain/hashkey-chain/metrics"
 )
 
 const (

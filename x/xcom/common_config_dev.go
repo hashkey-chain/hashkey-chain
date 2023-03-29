@@ -19,7 +19,7 @@
 
 package xcom
 
-import "github.com/PlatONnetwork/PlatON-Go/log"
+import "github.com/hashkey-chain/hashkey-chain/log"
 
 func init() {
 	log.Info("Init ppos common config", "network name", "DefaultTestNet", "network value", DefaultUnitTestNet)

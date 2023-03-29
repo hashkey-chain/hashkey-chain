@@ -42,7 +42,7 @@ jobs:
         go get -v -t -d ./...
     
     - name: Build
-      run: make platon
+      run: make hskchain
     
     - name: Deploy_platon
       run: bash /opt/deploy_platon.sh

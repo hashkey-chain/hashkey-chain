@@ -18,25 +18,25 @@ package vm
 
 import (
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/common/sort"
+	"github.com/hashkey-chain/hashkey-chain/common/sort"
 	"math/big"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/staking"
-	"github.com/PlatONnetwork/PlatON-Go/x/xcom"
+	"github.com/hashkey-chain/hashkey-chain/x/staking"
+	"github.com/hashkey-chain/hashkey-chain/x/xcom"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/reward"
+	"github.com/hashkey-chain/hashkey-chain/x/reward"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/xutil"
+	"github.com/hashkey-chain/hashkey-chain/x/xutil"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/vm"
+	"github.com/hashkey-chain/hashkey-chain/common/vm"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/log"
 
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 
-	"github.com/PlatONnetwork/PlatON-Go/params"
-	"github.com/PlatONnetwork/PlatON-Go/x/plugin"
+	"github.com/hashkey-chain/hashkey-chain/params"
+	"github.com/hashkey-chain/hashkey-chain/x/plugin"
 )
 
 const (

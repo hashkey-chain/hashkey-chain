@@ -18,7 +18,7 @@ package vm
 
 import (
 	"errors"
-	"github.com/PlatONnetwork/PlatON-Go/params"
+	"github.com/hashkey-chain/hashkey-chain/params"
 )
 
 type (

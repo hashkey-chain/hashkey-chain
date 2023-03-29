@@ -19,35 +19,35 @@ package plugin
 import (
 	"crypto/ecdsa"
 	"fmt"
-	"github.com/PlatONnetwork/PlatON-Go/params"
+	"github.com/hashkey-chain/hashkey-chain/params"
 	"math/big"
 	"math/rand"
 	"testing"
 	"time"
 
-	"github.com/PlatONnetwork/PlatON-Go/x/gov"
+	"github.com/hashkey-chain/hashkey-chain/x/gov"
 
-	"github.com/PlatONnetwork/PlatON-Go/crypto/bls"
-	"github.com/PlatONnetwork/PlatON-Go/log"
+	"github.com/hashkey-chain/hashkey-chain/crypto/bls"
+	"github.com/hashkey-chain/hashkey-chain/log"
 
-	//	"github.com/PlatONnetwork/PlatON-Go/core/state"
+	//	"github.com/hashkey-chain/hashkey-chain/core/state"
 
-	"github.com/PlatONnetwork/PlatON-Go/common/mock"
+	"github.com/hashkey-chain/hashkey-chain/common/mock"
 
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	cvm "github.com/PlatONnetwork/PlatON-Go/common/vm"
-	"github.com/PlatONnetwork/PlatON-Go/core/snapshotdb"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	cvm "github.com/hashkey-chain/hashkey-chain/common/vm"
+	"github.com/hashkey-chain/hashkey-chain/core/snapshotdb"
 
-	//	"github.com/PlatONnetwork/PlatON-Go/core/state"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	//	"github.com/PlatONnetwork/PlatON-Go/core/vm"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
-	"github.com/PlatONnetwork/PlatON-Go/rlp"
-	"github.com/PlatONnetwork/PlatON-Go/x/restricting"
-	"github.com/PlatONnetwork/PlatON-Go/x/staking"
-	"github.com/PlatONnetwork/PlatON-Go/x/xcom"
-	"github.com/PlatONnetwork/PlatON-Go/x/xutil"
+	//	"github.com/hashkey-chain/hashkey-chain/core/state"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	//	"github.com/hashkey-chain/hashkey-chain/core/vm"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/rlp"
+	"github.com/hashkey-chain/hashkey-chain/x/restricting"
+	"github.com/hashkey-chain/hashkey-chain/x/staking"
+	"github.com/hashkey-chain/hashkey-chain/x/xcom"
+	"github.com/hashkey-chain/hashkey-chain/x/xutil"
 )
 
 func init() {
@@ -221,7 +221,7 @@ var (
 	}
 
 	nodeNameArr = []string{
-		"PlatON",
+		"HashKey-Chain",
 		"Gavin",
 		"Emma",
 		"Kally",

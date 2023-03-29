@@ -17,7 +17,7 @@
 
 package gov
 
-import "github.com/PlatONnetwork/PlatON-Go/common"
+import "github.com/hashkey-chain/hashkey-chain/common"
 
 var (
 	ActiveVersionError                = common.NewBizError(302001, "Current active version not found")

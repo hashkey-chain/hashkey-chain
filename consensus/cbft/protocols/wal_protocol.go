@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
 
-	ctypes "github.com/PlatONnetwork/PlatON-Go/consensus/cbft/types"
+	ctypes "github.com/hashkey-chain/hashkey-chain/consensus/cbft/types"
 )
 
 const (

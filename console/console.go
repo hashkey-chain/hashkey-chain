@@ -28,14 +28,14 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/PlatONnetwork/PlatON-Go/console/prompt"
-	"github.com/PlatONnetwork/PlatON-Go/internal/jsre/deps"
+	"github.com/hashkey-chain/hashkey-chain/console/prompt"
+	"github.com/hashkey-chain/hashkey-chain/internal/jsre/deps"
 
 	"github.com/dop251/goja"
 
-	"github.com/PlatONnetwork/PlatON-Go/internal/jsre"
-	"github.com/PlatONnetwork/PlatON-Go/internal/web3ext"
-	"github.com/PlatONnetwork/PlatON-Go/rpc"
+	"github.com/hashkey-chain/hashkey-chain/internal/jsre"
+	"github.com/hashkey-chain/hashkey-chain/internal/web3ext"
+	"github.com/hashkey-chain/hashkey-chain/rpc"
 	"github.com/mattn/go-colorable"
 	"github.com/peterh/liner"
 )
@@ -193,7 +193,7 @@ func (c *Console) initExtensions() error {
 	if err != nil {
 		return fmt.Errorf("api modules: %v", err)
 	}
-	aliases := map[string]struct{}{"platon": {}, "personal": {}}
+	aliases := map[string]struct{}{"hskchain": {}, "personal": {}}
 	for api := range apis {
 		if api == "web3" {
 			continue
@@ -279,7 +279,7 @@ func (c *Console) AutoCompleteInput(line string, pos int) (string, []string, str
 		return "", nil, ""
 	}
 	// Chunck data to relevant part for autocompletion
-	// E.g. in case of nested lines platon.getBalance(platon.coinb<tab><tab>
+	// E.g. in case of nested lines hskchain.getBalance(hskchain.coinb<tab><tab>
 	start := pos - 1
 	for ; start > 0; start-- {
 		// Skip all methods and namespaces (i.e. including the dot)
@@ -298,15 +298,15 @@ func (c *Console) AutoCompleteInput(line string, pos int) (string, []string, str
 	return line[:start], c.jsre.CompleteKeywords(line[start:pos]), line[pos:]
 }
 
-// Welcome show summary of current PlatON instance and some metadata about the
+// Welcome show summary of current HashKey-Chain instance and some metadata about the
 // console's available modules.
 func (c *Console) Welcome() {
-	message := "Welcome to the PlatON JavaScript console!\n\n"
+	message := "Welcome to the HashKey-Chain JavaScript console!\n\n"
 
-	// Print some generic PlatON metadata
+	// Print some generic HashKey-Chain metadata
 	if res, err := c.jsre.Run(`
 		var message = "instance: " + web3.version.node + "\n";
-		message += "at block: " + platon.blockNumber + " (" + new Date(1000 * platon.getBlock(platon.blockNumber).timestamp) + ")\n";
+		message += "at block: " + hskchain.blockNumber + " (" + new Date(1000 * hskchain.getBlock(hskchain.blockNumber).timestamp) + ")\n";
 		try {
 			message += " datadir: " + admin.datadir + "\n";
 		} catch (err) {}

@@ -24,9 +24,9 @@ import (
 
 	graphqlEth "github.com/AlayaNetwork/graphql-go"
 
-	json2 "github.com/PlatONnetwork/PlatON-Go/common/json"
-	"github.com/PlatONnetwork/PlatON-Go/internal/ethapi"
-	"github.com/PlatONnetwork/PlatON-Go/node"
+	json2 "github.com/hashkey-chain/hashkey-chain/common/json"
+	"github.com/hashkey-chain/hashkey-chain/internal/ethapi"
+	"github.com/hashkey-chain/hashkey-chain/node"
 )
 
 type handler struct {
@@ -102,14 +102,14 @@ func newHandler(stack *node.Node, backend ethapi.Backend, cors, vhosts []string)
 	handler := node.NewHTTPHandlerStack(h, cors, vhosts)
 
 	stack.RegisterHandler("GraphQL UI", "/graphql/ui", GraphiQL{})
-	stack.RegisterHandler("GraphQL UI", "/platon/graphql/ui", GraphiQL{}) // for PlatON
+	stack.RegisterHandler("GraphQL UI", "/hskchain/graphql/ui", GraphiQL{}) // for PlatON
 
 	stack.RegisterHandler("GraphQL", "/graphql", handler)
 	stack.RegisterHandler("GraphQL", "/graphql/", handler)
 
 	// for PlatON
-	stack.RegisterHandler("GraphQL", "/platon/graphql", handler)
-	stack.RegisterHandler("GraphQL", "/platon/graphql/", handler)
+	stack.RegisterHandler("GraphQL", "/hskchain/graphql", handler)
+	stack.RegisterHandler("GraphQL", "/hskchain/graphql/", handler)
 
 	return nil
 }

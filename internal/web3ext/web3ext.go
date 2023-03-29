@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
-// package web3ext contains platon specific web3.js extensions.
+// package web3ext contains hskchain specific web3.js extensions.
 package web3ext
 
 var Modules = map[string]string{
 	"admin":    AdminJs,
 	"debug":    DebugJs,
-	"platon":   PlatonJs,
+	"hskchain":   PlatonJs,
 	"miner":    MinerJs,
 	"net":      NetJs,
 	"personal": PersonalJs,
@@ -381,7 +381,7 @@ web3._extend({
 
 const PlatonJs = `
 web3._extend({
-	property: 'platon',
+	property: 'hskchain',
 	methods: [
 		new web3._extend.Method({
 		name: 'chainId',

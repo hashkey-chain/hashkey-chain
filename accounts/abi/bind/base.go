@@ -1,18 +1,18 @@
-// Copyright 2015 The go-platon Authors
-// This file is part of the go-platon library.
+// Copyright 2015 The hashkey-chain Authors
+// This file is part of the hashkey-chain library.
 //
-// The go-platon library is free software: you can redistribute it and/or modify
+// The hashkey-chain library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// The go-platon library is distributed in the hope that it will be useful,
+// The hashkey-chain library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the go-platon library. If not, see <http://www.gnu.org/licenses/>.
+// along with the hashkey-chain library. If not, see <http://www.gnu.org/licenses/>.
 
 package bind
 
@@ -24,13 +24,13 @@ import (
 	"strings"
 	"sync"
 
-	platon "github.com/PlatONnetwork/PlatON-Go"
+	platon "github.com/hashkey-chain/hashkey-chain"
 
-	"github.com/PlatONnetwork/PlatON-Go/accounts/abi"
-	"github.com/PlatONnetwork/PlatON-Go/common"
-	"github.com/PlatONnetwork/PlatON-Go/core/types"
-	"github.com/PlatONnetwork/PlatON-Go/crypto"
-	"github.com/PlatONnetwork/PlatON-Go/event"
+	"github.com/hashkey-chain/hashkey-chain/accounts/abi"
+	"github.com/hashkey-chain/hashkey-chain/common"
+	"github.com/hashkey-chain/hashkey-chain/core/types"
+	"github.com/hashkey-chain/hashkey-chain/crypto"
+	"github.com/hashkey-chain/hashkey-chain/event"
 )
 
 // SignerFn is a signer function callback when a contract requires a method to
@@ -46,9 +46,9 @@ type CallOpts struct {
 }
 
 // TransactOpts is the collection of authorization data required to create a
-// valid platon transaction.
+// valid hskchain transaction.
 type TransactOpts struct {
-	From   common.Address // platon account to send the transaction from
+	From   common.Address // hskchain account to send the transaction from
 	Nonce  *big.Int       // Nonce to use for the transaction execution (nil = use pending state)
 	Signer SignerFn       // Method to use for signing the transaction (mandatory)
 
@@ -101,11 +101,11 @@ func (m *MetaData) GetAbi() (*abi.ABI, error) {
 }
 
 // BoundContract is the base wrapper object that reflects a contract on the
-// platon network. It contains a collection of methods that are used by the
+// hskchain network. It contains a collection of methods that are used by the
 // higher level contract bindings to operate.
 type BoundContract struct {
-	address    common.Address     // Deployment address of the contract on the platon blockchain
-	abi        abi.ABI            // Reflect based ABI to access the correct platon methods
+	address    common.Address     // Deployment address of the contract on the hskchain blockchain
+	abi        abi.ABI            // Reflect based ABI to access the correct hskchain methods
 	caller     ContractCaller     // Read interface to interact with the blockchain
 	transactor ContractTransactor // Write interface to interact with the blockchain
 	filterer   ContractFilterer   // Event filtering to interact with the blockchain
@@ -123,7 +123,7 @@ func NewBoundContract(address common.Address, abi abi.ABI, caller ContractCaller
 	}
 }
 
-// DeployContract deploys a contract onto the platon blockchain and binds the
+// DeployContract deploys a contract onto the hskchain blockchain and binds the
 // deployment address with a Go wrapper.
 func DeployContract(opts *TransactOpts, abi abi.ABI, bytecode []byte, backend ContractBackend, params ...interface{}) (common.Address, *types.Transaction, *BoundContract, error) {
 	// Otherwise try to deploy the contract

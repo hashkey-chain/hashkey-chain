@@ -19,7 +19,7 @@ package ppos
 import (
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/PlatONnetwork/PlatON-Go/p2p/discover"
+	"github.com/hashkey-chain/hashkey-chain/p2p/discover"
 )
 
 var (
