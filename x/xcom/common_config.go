@@ -74,19 +74,19 @@ const (
 var (
 	one, _ = new(big.Int).SetString("1000000000000000000", 10)
 
-	// 10 LAT
+	// 10 HSK
 	DelegateLowerLimit, _ = new(big.Int).SetString("10000000000000000000", 10)
 
-	// 1W LAT
+	// 1W HSK
 	DelegateUpperLimit, _ = new(big.Int).SetString("10000000000000000000000", 10)
 
 	// hard code genesis staking balance
-	// 15W LAT
+	// 15W HSK
 	GeneStakingAmount, _ = new(big.Int).SetString("150000000000000000000000", 10)
 
 	// 10W
 	StakeLowerLimit, _ = new(big.Int).SetString("100000000000000000000000", 10)
-	// 1000W LAT
+	// 1000W HSK
 	StakeUpperLimit, _ = new(big.Int).SetString("10000000000000000000000000", 10)
 
 	FloorMinimumRelease = new(big.Int).Mul(new(big.Int).SetUint64(100), one)
@@ -229,7 +229,7 @@ func getDefaultEMConfig(netId int8) *EconomicModel {
 		cdfundBalance *big.Int
 	)
 
-	// 3.22361981  thousand millions LAT
+	// 3.22361981  thousand millions HSK
 	if cdfundBalance, ok = new(big.Int).SetString("322361981000000000000000000", 10); !ok {
 		return nil
 	}
@@ -428,14 +428,14 @@ func getDefaultEMConfig(netId int8) *EconomicModel {
 func CheckStakeThreshold(threshold *big.Int) error {
 
 	if threshold.Cmp(StakeLowerLimit) < 0 || threshold.Cmp(StakeUpperLimit) > 0 {
-		return common.InvalidParameter.Wrap(fmt.Sprintf("The StakeThreshold must be [%d, %d] LAT", StakeLowerLimit, StakeUpperLimit))
+		return common.InvalidParameter.Wrap(fmt.Sprintf("The StakeThreshold must be [%d, %d] HSK", StakeLowerLimit, StakeUpperLimit))
 	}
 	return nil
 }
 
 func CheckOperatingThreshold(threshold *big.Int) error {
 	if threshold.Cmp(DelegateLowerLimit) < 0 || threshold.Cmp(DelegateUpperLimit) > 0 {
-		return common.InvalidParameter.Wrap(fmt.Sprintf("The OperatingThreshold must be [%d, %d] LAT ", DelegateLowerLimit, DelegateUpperLimit))
+		return common.InvalidParameter.Wrap(fmt.Sprintf("The OperatingThreshold must be [%d, %d] HSK ", DelegateLowerLimit, DelegateUpperLimit))
 	}
 	return nil
 }

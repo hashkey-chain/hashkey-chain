@@ -1542,7 +1542,7 @@ func (args *SendTxArgs) toTransaction() *types.Transaction {
 func SubmitTransaction(ctx context.Context, b Backend, tx *types.Transaction) (common.Hash, error) {
 	// If the transaction fee cap is already specified, ensure the
 	// fee of the given transaction is _reasonable_.
-	feeLat := new(big.Float).Quo(new(big.Float).SetInt(new(big.Int).Mul(tx.GasPrice(), new(big.Int).SetUint64(tx.Gas()))), new(big.Float).SetInt(big.NewInt(params.LAT)))
+	feeLat := new(big.Float).Quo(new(big.Float).SetInt(new(big.Int).Mul(tx.GasPrice(), new(big.Int).SetUint64(tx.Gas()))), new(big.Float).SetInt(big.NewInt(params.HSK)))
 	feeFloat, _ := feeLat.Float64()
 	if b.RPCTxFeeCap() != 0 && feeFloat > b.RPCTxFeeCap() {
 		return common.Hash{}, fmt.Errorf("tx fee (%.2f lat) exceeds the configured cap (%.2f lat)", feeFloat, b.RPCTxFeeCap())

@@ -56,7 +56,7 @@ func newTestBackend(t *testing.T) *testBackend {
 	signer := types.NewEIP155Signer(params.TestChainConfig.ChainID)
 	key, _ := crypto.HexToECDSA("b71c71a67e1177ad4e901695e1b4b9ee17ae16c6668d313eac2f96dbcda3f291")
 	for i := 0; i <= 31; i++ {
-		tx, err := types.SignTx(types.NewTransaction(uint64(i), common.HexToAddress("deadbeef"), big.NewInt(100), 21000, big.NewInt(int64(i+1)*params.GVon), nil), signer, key)
+		tx, err := types.SignTx(types.NewTransaction(uint64(i), common.HexToAddress("deadbeef"), big.NewInt(100), 21000, big.NewInt(int64(i+1)*params.GHashi), nil), signer, key)
 		if err != nil {
 			t.Fatalf("failed to create tx: %v", err)
 		}
@@ -79,7 +79,7 @@ func TestSuggestPrice(t *testing.T) {
 	config := Config{
 		Blocks:     3,
 		Percentile: 60,
-		Default:    big.NewInt(params.GVon),
+		Default:    big.NewInt(params.GHashi),
 	}
 	backend := newTestBackend(t)
 	oracle := NewOracle(backend, config)
@@ -89,7 +89,7 @@ func TestSuggestPrice(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to retrieve recommended gas price: %v", err)
 	}
-	expect := big.NewInt(params.GVon * int64(30))
+	expect := big.NewInt(params.GHashi * int64(30))
 	if got.Cmp(expect) != 0 {
 		t.Fatalf("Gas price mismatch, want %d, got %d", expect, got)
 	}

@@ -65,7 +65,7 @@ var DefaultConfig = Config{
 	TrieCleanCacheRejournal: 60 * time.Minute,
 	Miner: miner.Config{
 		GasFloor: params.GenesisGasLimit,
-		GasPrice: big.NewInt(params.GVon),
+		GasPrice: big.NewInt(params.GHashi),
 		Recommit: 3 * time.Second,
 	},
 

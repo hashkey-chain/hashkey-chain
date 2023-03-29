@@ -1366,16 +1366,16 @@ func TestStakingContract_DelegateMerge(t *testing.T) {
 	var proofHex bls.SchnorrProofHex
 	proofHex.UnmarshalText(proofByte)
 
-	stakingAmount := new(big.Int).SetUint64(params.LAT)
+	stakingAmount := new(big.Int).SetUint64(params.HSK)
 	stakingAmount.Mul(stakingAmount, new(big.Int).SetUint64(1000000))
 	chain.StateDB.AddBalance(stakingAdd, stakingAmount)
-	chain.StateDB.AddBalance(stakingAdd, new(big.Int).SetUint64(params.LAT))
+	chain.StateDB.AddBalance(stakingAdd, new(big.Int).SetUint64(params.HSK))
 
-	delAmount := new(big.Int).SetUint64(params.LAT)
+	delAmount := new(big.Int).SetUint64(params.HSK)
 	delAmount.Mul(delAmount, new(big.Int).SetUint64(100))
 	chain.StateDB.AddBalance(delAdd, delAmount)
 	chain.StateDB.AddBalance(delAdd, delAmount)
-	chain.StateDB.AddBalance(delAdd, new(big.Int).SetUint64(params.LAT))
+	chain.StateDB.AddBalance(delAdd, new(big.Int).SetUint64(params.HSK))
 
 	createStaking := func(hash common.Hash, header *types.Header, statedb *mock.MockStateDB, sdb snapshotdb.DB) error {
 		toStaking := newStakingContact(stakingAdd, hash, header.Number, statedb, sdb, initGas)
@@ -1401,7 +1401,7 @@ func TestStakingContract_DelegateMerge(t *testing.T) {
 	}
 	execFunc := []mock.Transaction{createStaking, delegateFunc, withDrewStaking, createStaking, delegateFunc}
 
-	delLastAmount := new(big.Int).SetUint64(params.LAT)
+	delLastAmount := new(big.Int).SetUint64(params.HSK)
 	delLastAmount.Mul(delLastAmount, new(big.Int).SetUint64(200))
 
 	afterTxHook := func(hash common.Hash, header *types.Header, sdb snapshotdb.DB) error {

@@ -77,9 +77,9 @@ var (
 
 	// MainnetChainConfig is the chain parameters to run a node on the main network.
 	MainnetChainConfig = &ChainConfig{
-		ChainID:     big.NewInt(100),
-		PIP7ChainID: big.NewInt(210425),
-		AddressHRP:  "lat",
+		ChainID:     big.NewInt(20230315),
+		PIP7ChainID: big.NewInt(20230315),
+		AddressHRP:  "hsk",
 		EmptyBlock:  "on",
 		EIP155Block: big.NewInt(1),
 		Cbft: &CbftConfig{
@@ -102,9 +102,9 @@ var (
 
 	// TestnetChainConfig is the chain parameters to run a node on the test network.
 	TestnetChainConfig = &ChainConfig{
-		ChainID:     big.NewInt(104),
-		PIP7ChainID: big.NewInt(210429),
-		AddressHRP:  "lat",
+		ChainID:     big.NewInt(230315),
+		PIP7ChainID: big.NewInt(230315),
+		AddressHRP:  "hst",
 		EmptyBlock:  "on",
 		EIP155Block: big.NewInt(1),
 		Cbft: &CbftConfig{
