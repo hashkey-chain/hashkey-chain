@@ -135,14 +135,14 @@ at block: 26 (Wed, 15 Dec 51802 20:22:44 CST)
 29
 ```
 
-For more information, please visit our [Docs](https://devdocs.platon.network/docs/en/).
+For more information, please visit our [Docs](https://devdocs.hashkeychain.io).
 
 ## Contributing to hashkey-chain
 
 All of codes for hashkey-chain are open source and contributing are very welcome! Before beginning, please take a look at our contributing [guidelines](https://github.com/hashkey-chain/hashkey-chain/blob/develop/.github/CONTRIBUTING.md). You can also open an issue by clicking [here](https://github.com/hashkey-chain/hashkey-chain/issues/new/choose).
 
 ## Support
-If you have any questions or suggestions please contact us at support@platon.network.
+If you have any questions or suggestions please contact us at support@hashkeychain.network.
 
 ## License
 The hashkey-chain library (i.e. all code outside of the cmd directory) is licensed under the GNU Lesser General Public License v3.0, also included in our repository in the COPYING.LESSER file.
