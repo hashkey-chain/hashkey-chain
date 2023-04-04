@@ -29,11 +29,11 @@ import (
 
 const (
 	DefaultHTTPHost    = "localhost" // Default host interface for the HTTP RPC server
-	DefaultHTTPPort    = 6789        // Default TCP port for the HTTP RPC server
+	DefaultHTTPPort    = 7789        // Default TCP port for the HTTP RPC server
 	DefaultWSHost      = "localhost" // Default host interface for the websocket RPC server
-	DefaultWSPort      = 6790        // Default TCP port for the websocket RPC server
+	DefaultWSPort      = 7790        // Default TCP port for the websocket RPC server
 	DefaultGraphQLHost = "localhost" // Default host interface for the GraphQL server
-	DefaultGraphQLPort = 6791        // Default TCP port for the GraphQL server
+	DefaultGraphQLPort = 7791        // Default TCP port for the GraphQL server
 )
 
 // DefaultConfig contains reasonable default settings.
@@ -47,7 +47,7 @@ var DefaultConfig = Config{
 	WSModules:           []string{"net", "web3"},
 	GraphQLVirtualHosts: []string{"localhost"},
 	P2P: p2p.Config{
-		ListenAddr:        ":16789",
+		ListenAddr:        ":17789",
 		MaxPeers:          60,
 		NAT:               nat.Any(),
 		MaxConsensusPeers: 40,

@@ -1,6 +1,6 @@
 ---
 name: Report a bug
-about: Something with PlatON is not working as expected
+about: Something with hashkey-chain is not working as expected
 title: ''
 labels: 'bug'
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 
 #### System information
 
-PlatON version: `platon version`
+HashKey-Chain version: `hsk-chain version`
 OS & Version: Windows/Linux/OSX
 Commit hash : (if `develop`)
 
